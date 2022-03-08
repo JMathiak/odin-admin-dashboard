@@ -73,9 +73,6 @@
   margin-bottom: 10px;
 }
 
-.project {
-}
-
 .project-header {
   grid-area: 1 / 1 / 2/ 4;
 }
