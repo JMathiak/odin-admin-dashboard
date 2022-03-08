@@ -72,9 +72,34 @@
 }
 
 .project {
-  border: 1px solid pink;
 }
 
 .project-header {
   grid-area: 1 / 1 / 2/ 4;
+}
+
+.card {
+  background-color: white;
+  height: 327px;
+  border-left: 15px solid pink;
+  border-radius: 5px 5px 5px 5px;
+  position: relative;
+}
+
+.card .title {
+  font-size: 36px;
+  font-family: "League Gothic", sans-serif;
+  margin-left: 5px;
+}
+
+.card p {
+  font-size: 24px;
+  font-family: "League Gothic", sans-serif;
+  margin-left: 5px;
+}
+
+.icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
