@@ -17,9 +17,48 @@
 .header {
   grid-area: header;
   border: 1px solid pink;
-  padding: 30px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "search search search search au au "
+    "welcome welcome welcome . actions actions";
 }
 
+.search input {
+  height: 2.8rem;
+  width: 70%;
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  background-color: #e2e8f0;
+}
+.search {
+  grid-area: search;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+}
+
+.search .icon-container {
+  justify-self: end;
+  padding-right: 10px;
+}
+.search img {
+  width: 36px;
+}
+.welcome {
+  grid-area: welcome;
+}
+
+.actions {
+  grid-area: actions;
+}
+
+.active-user {
+  grid-area: au;
+}
 .sidebar {
   grid-area: sidebar;
   border: 1px solid green;
@@ -204,10 +243,28 @@ h2 {
 
 .trend {
   display: grid;
-  grid-template-columns: 0.5fr 0.7fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "avatar handle"
+    "avatar name";
   align-self: center;
 }
 
-.person {
+.handle {
+  grid-area: handle;
+  justify-self: center;
+  align-self: center;
+}
+
+.name {
+  grid-area: name;
+  justify-self: center;
+  align-self: center;
+}
+
+.avatar {
+  grid-area: avatar;
+  justify-self: center;
   align-self: center;
 }
