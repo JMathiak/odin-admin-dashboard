@@ -16,7 +16,7 @@
 
 .header {
   grid-area: header;
-  border: 1px solid pink;
+
   padding: 15px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -61,7 +61,7 @@
 }
 .sidebar {
   grid-area: sidebar;
-  border: 1px solid green;
+
   display: grid;
   grid-template-rows: repeat(11, 1fr);
   gap: 2px;
@@ -73,7 +73,6 @@
 
 .content {
   grid-area: content;
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
