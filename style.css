@@ -50,10 +50,47 @@
 }
 .welcome {
   grid-area: welcome;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "ic greet ."
+    "ic user .";
 }
 
+.welcome .icon-container {
+  grid-area: ic;
+}
+
+.greeting {
+  grid-area: greet;
+  font-family: "League Gothic", sans-serif;
+  font-size: 24px;
+  align-self: center;
+}
+
+.user {
+  grid-area: user;
+  font-family: "League Gothic", sans-serif;
+  font-size: 36px;
+}
 .actions {
   grid-area: actions;
+  justify-self: center;
+  align-self: center;
+}
+
+.actions button {
+  border-radius: 1.625rem;
+  padding: 5px;
+  width: 100px;
+  outline: none;
+  border: none;
+  background-color: #c3acd5;
+  color: white;
+  font-family: "League Gothic", sans-serif;
+  font-size: 22px;
+  margin: 15px;
 }
 
 .active-user {
