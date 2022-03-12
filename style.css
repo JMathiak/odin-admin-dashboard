@@ -58,8 +58,10 @@
     "ic user .";
 }
 
-.welcome .icon-container {
+.welcome .avatar {
   grid-area: ic;
+  justify-self: end;
+  margin-right: 15px;
 }
 
 .greeting {
@@ -91,14 +93,40 @@
   font-family: "League Gothic", sans-serif;
   font-size: 22px;
   margin: 15px;
+  cursor: pointer;
 }
 
 .active-user {
   grid-area: au;
+  font-family: "League Gothic", sans-serif;
+  font-size: 24px;
+  align-self: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "bell ava name";
+}
+
+.active-user img {
+  grid-area: bell;
+  width: 28px;
+  justify-self: end;
+  align-self: center;
+}
+.active-user .avatar {
+  grid-area: ava;
+  width: 50px;
+  justify-self: center;
+  align-self: center;
+}
+
+.active-user .user {
+  grid-area: name;
+  align-self: center;
 }
 .sidebar {
   grid-area: sidebar;
-
   display: grid;
   grid-template-rows: repeat(11, 1fr);
   gap: 2px;
@@ -141,6 +169,7 @@
   display: grid;
   grid-template-columns: repeat(2, min-content);
   font-size: 36px;
+  cursor: pointer;
 }
 
 .sidecontent img {
@@ -289,18 +318,23 @@ h2 {
 
 .handle {
   grid-area: handle;
-  justify-self: center;
+  font-family: "League Gothic", sans-serif;
+  justify-self: start;
   align-self: center;
+  font-size: 30px;
 }
 
 .name {
   grid-area: name;
-  justify-self: center;
-  align-self: center;
+  font-family: "League Gothic", sans-serif;
+  justify-self: start;
+  font-size: 24px;
 }
 
 .avatar {
   grid-area: avatar;
-  justify-self: center;
+  justify-self: start;
   align-self: center;
+  width: 100px;
+  border-radius: 50%;
 }
